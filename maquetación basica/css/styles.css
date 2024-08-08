@@ -1,0 +1,340 @@
+/* Fuentes */
+@font-face {
+    font-family: "nevis";
+    src: url(fonts/nevis.eot);
+    src: url(fonts/nevis.eot?#iefix) format(embedded-opentype);
+    src: url(fonts/nevis.woff) format(woff);
+    src: url(fonts/nevis.ttf) format(truetype);
+    src: url(fonts/nevis.svg) format(svg);
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Estilos generales */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url(../img/paven.png);
+    display: block;
+}
+
+a {
+    color: #529125;
+    text-decoration: none;
+
+    &:hover {
+        color: yellow;
+    }
+
+    &:visited {
+        color: violet;
+    } 
+}
+
+/* Formularios */
+input[type="text"],
+input[type="password"],
+select{
+    border: 1px solid #C9C9C9;
+    box-shadow: 0px 0px 2px #ccc inset;
+    background-color: white;
+    padding: 1px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: gray;
+    transition: all 300ms;
+
+        &:focus {
+            border: 1px solid #70b231;
+            color: black;
+        }
+}
+
+input[type="submit"],
+input[type="button"],
+button{
+    display: block;
+    border-radius: 3px;
+    border: 1px solid green;
+    width: 60px;
+    padding: 5px;
+    background-color: #70b231;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0px 0px 2px gray;
+    }
+
+    &:active {
+        color: #666666;
+    }
+}
+
+#aside div label,
+#aside div input[type="text"],
+#aside div input[type="password"],
+#aside div a {
+    display: block;
+    width: 95%;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+#aside div input[type="submit"],
+#aside div input[type="button"],
+#aside div button {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#aside input,
+#aside button,
+#aside label {
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Cabecera */
+#header {
+    min-width: 1024px;
+    width: 100%;
+    height: 250px;
+    margin: 0 auto;
+
+    a {
+        text-decoration: none;
+        color: #70b231;
+        font-family: nevis;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        margin-top: 10px;
+        text-shadow: 0px 2px 1px #333;
+
+        transition: all 300ms;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 50px;
+
+        :hover {
+            text-shadow: 0px 2px 1px #333, 0px 0px 4px #70b231;
+        }
+    }
+
+    #logotipo {
+        width: 770px;
+        margin: 0 auto;
+        padding-top: 20px;
+
+        img {
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+            width: 140px;
+        }
+    }
+}
+
+
+/* Barra de navegación */
+#nav {
+    width: 100%;
+    height: 40px;
+    background-color: #333;
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+    box-shadow: 0px 0px 2px gray;
+
+    ul {
+        list-style: none;
+        text-decoration: none;
+        margin: 0 auto;
+        width: 1040px;
+    }
+
+    >ul>li {
+        line-height: 40px;
+        float: left;
+        border-right: 2px solid gray;
+        transition: all 600ms;
+
+        >a {
+            color: white;
+            text-decoration: none;
+
+            display: block;
+            padding-inline: 20px;
+
+            &:first-child {
+                border-left: 2px solid gray;
+
+            }
+        }
+
+        >ul {
+            display: none;
+            position: absolute;
+            width: 160px;
+            box-shadow: 0px 2px 2px gray;
+            z-index: 1;
+        }
+
+        &:hover {
+            background-color: #70b231;
+            box-shadow: 0px 0px 4px green inset;
+        }
+
+        &:hover>ul {
+            display: block;
+
+        }
+
+        &:hover>ul>li {
+            background-color: #F2F1F0;
+            border-bottom: 1px solid #D6D6D6;
+            padding: 8px;
+            line-height: 25px;
+            font-size: 13px;
+            transition: all 300ms;
+
+            &:hover {
+                box-shadow: 0px 0px 6px #666 inset;
+                background-color: #c8c8c8;
+            }
+
+            a {
+                color: #666666;
+                text-decoration: none;
+
+            }
+
+        }
+    }
+}
+
+/* Contenido central */
+#main {
+    width: 100%;
+    min-height: 800px;
+    margin: 0 auto;
+}
+
+/* Barra lateral */
+#aside, #caja {
+    width: 200px;
+    float: left;
+    margin: 30px;
+    margin: 30px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 2px #ccc;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+    .widget {
+        display: block;
+        width: 180px;
+        margin: 5px auto;
+        padding: 8px;
+        padding-inline: 10px;
+        font-size: 14px;
+        border-bottom: 1px dashed #333;
+
+        :last-child {
+            margin-bottom: 20px;
+            
+        }
+    }
+
+    h3 {
+        display: block;
+        color: #333;
+        text-align: center;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        background-color: #F2F1F0;
+        border: 1px solid #ccc;
+        border-inline: none;
+        margin-bottom: 15px;
+    }
+
+    li {
+        margin-top: 8px;
+        margin-bottom: 5px;
+        margin-left: 20px;
+        list-style: square;
+    }
+}
+
+/* Secciones */
+#sections {
+    float: right;
+    width: 75%;
+    font-family: sans-serif;
+    margin-right: 20px;
+
+    .titulos {
+        font-size: 25px;
+        font-weight: normal;
+        letter-spacing: 2px;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #ccc;
+    }
+
+    section {
+        margin-top: 40px;
+        background-color: white;
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0px 0px 4px #C9C9C9;
+        color: #333;
+        overflow: hidden;
+    }
+
+    .articles {
+        margin: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .date {
+        color: gray;
+        font-size: 15px;
+    }
+
+    .stickerOne,
+    .stickerTwo {
+        position: absolute;
+        margin-top: -40px;
+
+        &.stickerTwo {
+            margin-left: 860px;
+        }
+    }
+}
+
+#siguiente {
+    float: right;
+    margin-top: 20px;
+}
+
+/* Pie de página */
+#footer {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 40px;
+    background-color: #333;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+}
